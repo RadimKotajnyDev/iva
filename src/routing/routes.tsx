@@ -1,15 +1,8 @@
 import {Homepage} from "@/pages/homepage/Homepage.tsx";
-import type {ReactNode} from "react";
+import {JavascriptCourse} from "@/pages/kurzy/javascriptCourse.tsx";
+import type {RouteType} from "@/types/RouteType.tsx";
 
-type Route = {
-  displayName: string,
-  ignore: boolean,
-  path: string,
-  element: ReactNode,
-  subRoutes?: Route[],
-}
-
-export const routes: Route[] = [
+export const routes: RouteType[] = [
   {
     displayName: "",
     ignore: true,
@@ -23,12 +16,6 @@ export const routes: Route[] = [
     element: <></>,
   },
   {
-    displayName: "Kontakt",
-    ignore: false,
-    path: "/kontakt",
-    element: <></>,
-  },
-  {
     displayName: "Kurzy",
     ignore: false,
     path: "/kurzy",
@@ -38,7 +25,7 @@ export const routes: Route[] = [
         displayName: "Javascript",
         ignore: false,
         path: "/kurzy/javascript",
-        element: <></>,
+        element: <JavascriptCourse />,
       },
       {
         displayName: "React",
@@ -77,5 +64,11 @@ export const routes: Route[] = [
         element: <></>,
       }
     ]
-  }
+  },
+  {
+    displayName: "Kontakt",
+    ignore: false,
+    path: "/kontakt",
+    element: <></>,
+  },
 ]

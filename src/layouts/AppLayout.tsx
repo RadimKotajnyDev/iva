@@ -1,11 +1,13 @@
 import type {FC} from "react";
 import {Outlet} from "react-router";
 import {Navbar} from "@/components/Navbar.tsx";
+import {PageBar} from "@/components/PageBar.tsx";
 
 export const AppLayout: FC = () => {
   return (
-    <main className="h-screen flex flex-col">
+    <section className="h-screen flex flex-col">
       <header className="mb-10">
+        <PageBar />
         <Navbar />
       </header>
       <main className="container mx-auto flex flex-col gap-10">
@@ -15,6 +17,6 @@ export const AppLayout: FC = () => {
         <p>Copyright &copy; {new Date().getFullYear()} Iva s.r.o.</p>
         <p>Všechna práva vyhrazena.</p>
       </footer>
-    </main>
+    </section>
   )
 }
