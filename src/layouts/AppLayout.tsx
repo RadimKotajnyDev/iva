@@ -14,8 +14,8 @@ export const AppLayout: FC = () => {
         <Outlet />
       </main>
       <footer className="w-full flex flex-col md:flex-row text-center justify-center text-xs text-primary-foreground font-light p-2 gap-1">
-        <p>Copyright &copy; {new Date().getFullYear()} Imaginární Vzdělávací Agentura s.r.o.</p>
-        <p>Všechna práva vyhrazena.</p>
+        <p>Copyright &copy; {new Date().getFullYear()} Imaginární Vzdělávací Agentura.</p>
+        <p>Fiktivní agentura pro účel demonstrace tvorby webových stránek.</p>
       </footer>
     </section>
   )

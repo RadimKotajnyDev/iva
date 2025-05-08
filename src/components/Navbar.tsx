@@ -31,7 +31,7 @@ export const Navbar: FC = () => {
       <nav className="w-full flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
           <img src="/logo.png" alt="Iva logo" className="h-20 p-3 rounded-full w-auto" />
-          <h1 className="text-3xl font-semibold text-primary-foreground md:block hidden">IVA s.r.o.</h1>
+          <h1 className="text-3xl font-semibold text-primary-foreground md:block hidden">IVA</h1>
           <span className="w-[1px] h-5 bg-primary-foreground xl:block hidden" />
           <h2 className="text-xl text-primary-foreground xl:block hidden">Vzdělávací agentura</h2>
         </Link>
