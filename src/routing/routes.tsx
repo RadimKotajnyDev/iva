@@ -8,6 +8,7 @@ import {UIUXDesign} from "@/pages/kurzy/UIUXDesign.tsx";
 import {DotNETcourse} from "@/pages/kurzy/DotNETcourse.tsx";
 import {CryptoCourse} from "@/pages/kurzy/CryptoCourse.tsx";
 import {Kontakty} from "@/pages/Kontakty.tsx";
+import {TypescriptCourse} from "@/pages/kurzy/TypescriptCourse.tsx";
 
 export const routes: RouteType[] = [
   {
@@ -15,12 +16,6 @@ export const routes: RouteType[] = [
     ignore: true,
     path: "/",
     element: <Homepage />,
-  },
-  {
-    displayName: "O nás",
-    ignore: false,
-    path: "/o-nas",
-    element: <></>,
   },
   {
     displayName: "Kurzy",
@@ -33,6 +28,12 @@ export const routes: RouteType[] = [
         ignore: false,
         path: "/kurzy/javascript",
         element: <JavascriptCourse />,
+      },
+      {
+        displayName: "Typescript",
+        ignore: false,
+        path: "/kurzy/Typescript",
+        element: <TypescriptCourse />,
       },
       {
         displayName: "React",

@@ -36,8 +36,10 @@ export const Course: FC<Props> = ({
               <CarouselContent className="flex items-center">
                 {images.map((image, index) => (
                   <CarouselItem key={image.name + index}>
-                    <img src={image.src} alt={image.alt} className="rounded-sm"/>
-                    <p className="text-sm w-full text-center text-muted-foreground">{image.name}</p>
+                    <figure className="flex flex-col gap-2">
+                      <img src={image.src} alt={image.alt} className="rounded-sm"/>
+                      <figcaption className="text-sm w-full text-center text-muted-foreground">{image.name}</figcaption>
+                    </figure>
                   </CarouselItem>
                 ))}
               </CarouselContent>
