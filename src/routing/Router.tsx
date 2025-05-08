@@ -1,4 +1,4 @@
-import {type FC, useMemo} from "react";
+import {type FC} from "react";
 import {BrowserRouter, Route, Routes} from "react-router";
 import {routes as initialRoutes} from "@/routing/routes.tsx";
 import {AppLayout} from "@/layouts/AppLayout.tsx";
@@ -7,9 +7,7 @@ import {flattenRoutes} from "@/routing/RouteFunctions.tsx";
 
 export const Router: FC = () => {
 
-  const mergedRoutes = useMemo(
-    () => flattenRoutes(initialRoutes)
-    , []);
+  const mergedRoutes = flattenRoutes(initialRoutes)
 
   return (
     <BrowserRouter>
