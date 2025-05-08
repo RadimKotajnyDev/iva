@@ -1,6 +1,13 @@
 import {Homepage} from "@/pages/homepage/Homepage.tsx";
-import {JavascriptCourse} from "@/pages/kurzy/javascriptCourse.tsx";
+import {JavascriptCourse} from "@/pages/kurzy/JavascriptCourse.tsx";
 import type {RouteType} from "@/types/RouteType.tsx";
+import {ReactCourse} from "@/pages/kurzy/ReactCourse.tsx";
+import {VueCourse} from "@/pages/kurzy/VueCourse.tsx";
+import {SvelteCourse} from "@/pages/kurzy/SvelteCourse.tsx";
+import {UIUXDesign} from "@/pages/kurzy/UIUXDesign.tsx";
+import {DotNETcourse} from "@/pages/kurzy/DotNETcourse.tsx";
+import {CryptoCourse} from "@/pages/kurzy/CryptoCourse.tsx";
+import {Kontakty} from "@/pages/Kontakty.tsx";
 
 export const routes: RouteType[] = [
   {
@@ -31,37 +38,37 @@ export const routes: RouteType[] = [
         displayName: "React",
         ignore: false,
         path: "/kurzy/react",
-        element: <></>,
+        element: <ReactCourse />,
       },
       {
         displayName: "Vue",
         ignore: false,
         path: "/kurzy/vue",
-        element: <></>,
+        element: <VueCourse />,
       },
       {
         displayName: "Svelte",
         ignore: false,
         path: "/kurzy/svelte",
-        element: <></>,
+        element: <SvelteCourse />,
       },
       {
-        displayName: "TypeScript",
+        displayName: ".NET",
         ignore: false,
-        path: "/kurzy/typescript",
-        element: <></>,
+        path: "/kurzy/dotnet",
+        element: <DotNETcourse />,
       },
       {
-        displayName: "Node.js",
+        displayName: "UX/UI Design",
         ignore: false,
-        path: "/kurzy/nodejs",
-        element: <></>,
+        path: "/kurzy/ux-ui-design",
+        element: <UIUXDesign />,
       },
       {
-        displayName: "MongoDB",
+        displayName: "Crypto",
         ignore: false,
-        path: "/kurzy/mongodb",
-        element: <></>,
+        path: "/kurzy/zadna-pyramida-hehe",
+        element: <CryptoCourse />,
       }
     ]
   },
@@ -69,6 +76,6 @@ export const routes: RouteType[] = [
     displayName: "Kontakt",
     ignore: false,
     path: "/kontakt",
-    element: <></>,
+    element: <Kontakty />,
   },
 ]
