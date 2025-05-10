@@ -9,40 +9,46 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import type {FC} from "react";
-import {MagicCard} from "@/components/magicui/magic-card.tsx";
+import type { FC } from "react";
+import { MagicCard } from "@/components/magicui/magic-card.tsx";
 
 export const Kontakty: FC = () => {
   return (
-    <Card className="p-0 max-w-sm w-full shadow-none border-none">
-      <MagicCard
-        gradientColor=""
-        className="p-0"
-      >
-        <CardHeader className="border-b border-border p-4 [.border-b]:pb-4">
-          <CardTitle>Login</CardTitle>
-          <CardDescription>
-            Enter your credentials to access your account
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="p-4">
-          <form>
-            <div className="grid gap-4">
-              <div className="grid gap-2">
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="name@example.com" />
+    <div className="flex w-full justify-center">
+      <Card className="p-0 max-w-sm w-full shadow-none border-none">
+        <MagicCard
+          gradientColor=""
+          className="p-0"
+        >
+          <CardHeader className="border-b border-border p-8 [.border-b]:pb-4">
+            <CardTitle>Kontaktní formulář</CardTitle>
+            <CardDescription>
+              Vyplňte vaše údaje a my se vám ozveme co nejdříve
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="p-8 ">
+            <form>
+              <div className="grid gap-4">
+                <div className="grid gap-2">
+                  <Label htmlFor="name">Jméno</Label>
+                  <Input id="name" type="text" placeholder="Vaše jméno" />
+                </div>
+                <div className="grid gap-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input id="email" type="email" placeholder="email@priklad.cz" />
+                </div>
+                <div className="grid gap-2">
+                  <Label htmlFor="message">Zpráva</Label>
+                  <textarea id="message" placeholder="Vaše zpráva" className="w-full border rounded-md p-4"></textarea>
+                </div>
               </div>
-              <div className="grid gap-2">
-                <Label htmlFor="password">Password</Label>
-                <Input id="password" type="password" />
-              </div>
-            </div>
-          </form>
-        </CardContent>
-        <CardFooter className="p-4 border-t border-border [.border-t]:pt-4">
-          <Button className="w-full">Sign In</Button>
-        </CardFooter>
-      </MagicCard>
-    </Card>
+            </form>
+          </CardContent>
+          <CardFooter className="py-4 px-8 border-t border-border [.border-t]:pt-4">
+            <Button className="w-full">Odeslat</Button>
+          </CardFooter>
+        </MagicCard>
+      </Card>
+    </div>
   );
 }
