@@ -80,6 +80,7 @@ export const Navbar: FC = () => {
                 <DrawerTitle>Menu</DrawerTitle>
                 {flatRoutes
                   .filter((route) => !route.ignore)
+                  .filter((route) => route.displayName !== "Kurzy")
                   .map((route) => (
                     <Button asChild key={route.path} size="lg" variant="outline" onClick={() => setIsOpen(!isOpen)}>
                       <Link to={route.path}>{route.displayName}</Link>
