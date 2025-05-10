@@ -80,7 +80,7 @@ export const Homepage: FC = () => {
           </footer>
         </header>
       </BlurFade>
-      <div className="w-[600px]">
+      <div className="w-[600px] max-w-[400px] md:max-w-none">
         <ImageGrid/>
       </div>
     </section>
