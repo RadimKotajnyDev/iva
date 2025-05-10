@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/drawer"
 import {IoIosMenu} from "react-icons/io";
 import {flattenRoutes} from "@/routing/RouteFunctions.tsx";
+import {ConfettiButton} from "@/components/magicui/confetti.tsx";
 
 export const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,8 +53,8 @@ export const Navbar: FC = () => {
                       <NavigationMenuTrigger>{route.displayName}</NavigationMenuTrigger>
                       <NavigationMenuContent className="flex flex-col gap-3">
                         {route.subRoutes.map((subRoute) => (
-                          <Button key={subRoute.path}>
-                            <Link key={subRoute.path} to={subRoute.path}>
+                          <Button asChild key={subRoute.path} className="w-full">
+                            <Link key={subRoute.path} to={subRoute.path} className="w-full">
                               {subRoute.displayName}
                             </Link>
                           </Button>
@@ -65,9 +66,14 @@ export const Navbar: FC = () => {
               </li>
             ))}
           <li>
-            <Button size="lg">
+            <ConfettiButton
+              options={{
+                get angle() {
+                  return Math.floor(Math.random() * (250 - 170 + 1)) + 170;
+                },
+              }}>
               Můj účet
-            </Button>
+            </ConfettiButton>
           </li>
         </ul>
         <div className="md:hidden">
