@@ -2,7 +2,7 @@
 
 ## 📖 instalace
 
-pro použití tohoto projektu je potřeba:
+pro spuštění tohoto projektu je potřeba:
 - [NodeJS](https://nodejs.org/en/)
 - [pnpm](https://pnpm.io/)
 
@@ -12,3 +12,7 @@ pro použití tohoto projektu je potřeba:
 pnpm install
 pnpm dev
 ```
+
+## ❤️ Release
+
+[https://iva.radimkotajny.dev/](https://iva.radimkotajny.dev/)
