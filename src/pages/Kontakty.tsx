@@ -31,15 +31,15 @@ export const Kontakty: FC = () => {
               <div className="grid gap-4">
                 <div className="grid gap-2">
                   <Label htmlFor="name">Jméno</Label>
-                  <Input id="name" type="text" placeholder="Vaše jméno" />
+                  <Input id="name" type="text" placeholder="Vaše jméno" className="border-primary"/>
                 </div>
                 <div className="grid gap-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="email@priklad.cz" />
+                  <Input id="email" type="email" placeholder="email@priklad.cz" className="border-primary" />
                 </div>
                 <div className="grid gap-2">
                   <Label htmlFor="message">Zpráva</Label>
-                  <textarea id="message" placeholder="Vaše zpráva" className="w-full border rounded-md p-4"></textarea>
+                  <textarea id="message" placeholder="Vaše zpráva" className="w-full border border-primary rounded-md p-4"></textarea>
                 </div>
               </div>
             </form>
